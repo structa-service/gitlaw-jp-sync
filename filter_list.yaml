@@ -1,0 +1,284 @@
+# gitlaw-jp-sync: 追跡対象法律リスト
+# South Gate / IWC のビジネス（クロスボーダー取引・投資・アパレル・輸出）に関連する66件
+# law_id: gitlaw-jp のディレクトリ名（法令ID）
+# category: Structa 保存カテゴリ（規制-法務 固定）
+# structa_category: Structa wiki の分類タグ
+# name: 法律名（日本語）
+
+laws:
+  # クロスボーダー・外為（5件）
+  - law_id: "324AC0000000228"
+    name: "外国為替及び外国貿易法"
+    structa_category: "クロスボーダー・外為"
+
+  - law_id: "337AC0000000144"
+    name: "外国居住者等の所得に対する相互主義による所得税等の非課税等に関する法律"
+    structa_category: "クロスボーダー・外為"
+
+  - law_id: "344AC0000000046"
+    name: "租税条約等の実施に伴う所得税法、法人税法及び地方税法の特例等に関する法律"
+    structa_category: "クロスボーダー・外為"
+
+  - law_id: "409AC0000000110"
+    name: "内国税の適正な課税の確保を図るための国外送金等に係る調書の提出等に関する法律"
+    structa_category: "クロスボーダー・外為"
+
+  - law_id: "428AC0000000089"
+    name: "外国人の技能実習の適正な実施及び技能実習生の保護に関する法律"
+    structa_category: "クロスボーダー・外為"
+
+  # マイナンバー・行政手続（1件）
+  - law_id: "425AC0000000027"
+    name: "行政手続における特定の個人を識別するための番号の利用等に関する法律"
+    structa_category: "マイナンバー・行政手続"
+
+  # 仲裁・ADR（3件）
+  - law_id: "326AC1000000222"
+    name: "民事調停法"
+    structa_category: "仲裁・ADR"
+
+  - law_id: "415AC0000000138"
+    name: "仲裁法"
+    structa_category: "仲裁・ADR"
+
+  - law_id: "505AC0000000016"
+    name: "調停による国際的な和解合意に関する国際連合条約の実施に関する法律"
+    structa_category: "仲裁・ADR"
+
+  # 会社・商事・契約基盤（7件）
+  - law_id: "129AC0000000089"
+    name: "民法"
+    structa_category: "会社・商事・契約基盤"
+
+  - law_id: "132AC0000000048"
+    name: "商法"
+    structa_category: "会社・商事・契約基盤"
+
+  - law_id: "338AC0000000125"
+    name: "商業登記法"
+    structa_category: "会社・商事・契約基盤"
+
+  - law_id: "403AC0000000090"
+    name: "借地借家法"
+    structa_category: "会社・商事・契約基盤"
+
+  - law_id: "416AC0000000123"
+    name: "不動産登記法"
+    structa_category: "会社・商事・契約基盤"
+
+  - law_id: "417AC0000000086"
+    name: "会社法"
+    structa_category: "会社・商事・契約基盤"
+
+  - law_id: "417AC0000000087"
+    name: "会社法の施行に伴う関係法律の整備等に関する法律"
+    structa_category: "会社・商事・契約基盤"
+
+  # 個人情報・IT（5件）
+  - law_id: "359AC0000000086"
+    name: "電気通信事業法"
+    structa_category: "個人情報・IT"
+
+  - law_id: "412AC0000000102"
+    name: "電子署名及び認証業務に関する法律"
+    structa_category: "個人情報・IT"
+
+  - law_id: "413AC0000000137"
+    name: "特定電気通信による情報の流通によって発生する権利侵害等への対処に関する法律"
+    structa_category: "個人情報・IT"
+
+  - law_id: "415AC0000000057"
+    name: "個人情報の保護に関する法律"
+    structa_category: "個人情報・IT"
+
+  - law_id: "503AC0000000032"
+    name: "取引デジタルプラットフォームを利用する消費者の利益の保護に関する法律"
+    structa_category: "個人情報・IT"
+
+  # 倒産・事業再生（3件）
+  - law_id: "411AC0000000225"
+    name: "民事再生法"
+    structa_category: "倒産・事業再生"
+
+  - law_id: "414AC0000000154"
+    name: "会社更生法"
+    structa_category: "倒産・事業再生"
+
+  - law_id: "416AC0000000075"
+    name: "破産法"
+    structa_category: "倒産・事業再生"
+
+  # 労働・雇用（8件）
+  - law_id: "322AC0000000049"
+    name: "労働基準法"
+    structa_category: "労働・雇用"
+
+  - law_id: "334AC0000000137"
+    name: "最低賃金法"
+    structa_category: "労働・雇用"
+
+  - law_id: "347AC0000000113"
+    name: "雇用の分野における男女の均等な機会及び待遇の確保等に関する法律"
+    structa_category: "労働・雇用"
+
+  - law_id: "349AC0000000116"
+    name: "雇用保険法"
+    structa_category: "労働・雇用"
+
+  - law_id: "360AC0000000088"
+    name: "労働者派遣事業の適正な運営の確保及び派遣労働者の保護等に関する法律"
+    structa_category: "労働・雇用"
+
+  - law_id: "403AC0000000076"
+    name: "育児休業、介護休業等育児又は家族介護を行う労働者の福祉に関する法律"
+    structa_category: "労働・雇用"
+
+  - law_id: "405AC0000000076"
+    name: "短時間労働者及び有期雇用労働者の雇用管理の改善等に関する法律"
+    structa_category: "労働・雇用"
+
+  - law_id: "419AC0000000128"
+    name: "労働契約法"
+    structa_category: "労働・雇用"
+
+  # 取引・消費者（3件）
+  - law_id: "336AC0000000159"
+    name: "割賦販売法"
+    structa_category: "取引・消費者"
+
+  - law_id: "351AC0000000057"
+    name: "特定商取引に関する法律"
+    structa_category: "取引・消費者"
+
+  - law_id: "412AC0000000061"
+    name: "消費者契約法"
+    structa_category: "取引・消費者"
+
+  # 知的財産（5件）
+  - law_id: "334AC0000000121"
+    name: "特許法"
+    structa_category: "知的財産"
+
+  - law_id: "334AC0000000125"
+    name: "意匠法"
+    structa_category: "知的財産"
+
+  - law_id: "334AC0000000127"
+    name: "商標法"
+    structa_category: "知的財産"
+
+  - law_id: "345AC0000000048"
+    name: "著作権法"
+    structa_category: "知的財産"
+
+  - law_id: "405AC0000000047"
+    name: "不正競争防止法"
+    structa_category: "知的財産"
+
+  # 税務（10件）
+  - law_id: "325AC0000000073"
+    name: "相続税法"
+    structa_category: "税務"
+
+  - law_id: "332AC0000000026"
+    name: "租税特別措置法"
+    structa_category: "税務"
+
+  - law_id: "334AC0000000147"
+    name: "国税徴収法"
+    structa_category: "税務"
+
+  - law_id: "337AC0000000066"
+    name: "国税通則法"
+    structa_category: "税務"
+
+  - law_id: "340AC0000000033"
+    name: "所得税法"
+    structa_category: "税務"
+
+  - law_id: "340AC0000000034"
+    name: "法人税法"
+    structa_category: "税務"
+
+  - law_id: "342AC0000000023"
+    name: "印紙税法"
+    structa_category: "税務"
+
+  - law_id: "363AC0000000108"
+    name: "消費税法"
+    structa_category: "税務"
+
+  - law_id: "410AC0000000025"
+    name: "電子計算機を使用して作成する国税関係帳簿書類の保存方法等の特例に関する法律"
+    structa_category: "税務"
+
+  - law_id: "426AC0000000011"
+    name: "地方法人税法"
+    structa_category: "税務"
+
+  # 競争法（1件）
+  - law_id: "322AC0000000054"
+    name: "私的独占の禁止及び公正取引の確保に関する法律"
+    structa_category: "競争法"
+
+  # 金融・投資（10件）
+  - law_id: "323AC0000000025"
+    name: "金融商品取引法"
+    structa_category: "金融・投資"
+
+  - law_id: "326AC0100000198"
+    name: "投資信託及び投資法人に関する法律"
+    structa_category: "金融・投資"
+
+  - law_id: "356AC0000000059"
+    name: "銀行法"
+    structa_category: "金融・投資"
+
+  - law_id: "358AC1000000032"
+    name: "貸金業法"
+    structa_category: "金融・投資"
+
+  - law_id: "407AC0000000105"
+    name: "保険業法"
+    structa_category: "金融・投資"
+
+  - law_id: "410AC0000000090"
+    name: "投資事業有限責任組合契約に関する法律"
+    structa_category: "金融・投資"
+
+  - law_id: "416AC0000000154"
+    name: "信託業法"
+    structa_category: "金融・投資"
+
+  - law_id: "418AC0000000108"
+    name: "信託法"
+    structa_category: "金融・投資"
+
+  - law_id: "420AC0000000056"
+    name: "保険法"
+    structa_category: "金融・投資"
+
+  - law_id: "421AC0000000059"
+    name: "資金決済に関する法律"
+    structa_category: "金融・投資"
+
+  # 関税・輸出入（5件）
+  - law_id: "143AC0000000054"
+    name: "関税定率法"
+    structa_category: "関税・輸出入"
+
+  - law_id: "327AC0000000299"
+    name: "輸出入取引法"
+    structa_category: "関税・輸出入"
+
+  - law_id: "329AC0000000061"
+    name: "関税法"
+    structa_category: "関税・輸出入"
+
+  - law_id: "335AC0000000036"
+    name: "関税暫定措置法"
+    structa_category: "関税・輸出入"
+
+  - law_id: "342AC0000000122"
+    name: "通関業法"
+    structa_category: "関税・輸出入"

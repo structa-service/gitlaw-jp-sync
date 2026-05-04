@@ -1,0 +1,78 @@
+name: Sync Japanese Laws to Structa
+
+on:
+  # 毎週月曜日 9:00 JST（= UTC 0:00）に自動実行
+  schedule:
+    - cron: "0 0 * * 1"
+
+  # 手動トリガー（GitHub UI から実行可能）
+  workflow_dispatch:
+    inputs:
+      force_full_sync:
+        description: "全法律を強制再同期する（通常は差分のみ）"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+jobs:
+  sync:
+    name: "gitlaw-jp → Structa 同期"
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    permissions:
+      contents: write  # state/last_commit.txt のコミット・プッシュに必要
+
+    steps:
+      # ─── 1. リポジトリをチェックアウト ─────────────────────────────────────
+      - name: Checkout sync repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ─── 2. Python セットアップ ─────────────────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install requests pyyaml
+
+      # ─── 3. 同期スクリプト実行 ──────────────────────────────────────────────
+      - name: Run sync script
+        env:
+          GITHUB_TOKEN:       ${{ secrets.GITHUB_TOKEN }}
+          STRUCTA_MCP_KEY:    ${{ secrets.STRUCTA_MCP_KEY }}
+          STRUCTA_CUSTOMER_ID: ${{ secrets.STRUCTA_CUSTOMER_ID }}
+          FORCE_FULL_SYNC:    ${{ github.event.inputs.force_full_sync || 'false' }}
+        run: |
+          python scripts/sync_to_structa.py
+
+      # ─── 4. state/last_commit.txt をコミット＆プッシュ ────────────────────
+      - name: Commit and push updated state
+        run: |
+          git config user.name  "gitlaw-sync-bot"
+          git config user.email "tokuo.nobuhiro@gmail.com"
+
+          # state ファイルが変更されていれば commit
+          if git diff --quiet state/last_commit.txt; then
+            echo "state に変更なし。コミットをスキップします。"
+          else
+            git add state/last_commit.txt
+            git commit -m "chore: update last_commit.txt [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+            git push
+            echo "✅ state/last_commit.txt をプッシュしました。"
+          fi
+
+      # ─── 5. 失敗時のサマリー ────────────────────────────────────────────────
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "::error::同期スクリプトが失敗しました。"
+          echo "::error::手動で FORCE_FULL_SYNC=true を指定して再実行してください。"
+          echo "::error::または GitHub Actions の logs を確認してください。"
